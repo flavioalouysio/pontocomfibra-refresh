@@ -20,7 +20,7 @@ export const REGIONS: Record<RegionGroup, { label: string; cities: string[] }> =
     cities: ["Campinas", "Hortolândia", "Sumaré"],
   },
   cotia: {
-    label: "Cotia e Região",
+    label: "Itapecerica e Região",
     cities: ["Cotia", "Itapecerica da Serra", "Embu das Artes", "São Carlos"],
   },
 };
