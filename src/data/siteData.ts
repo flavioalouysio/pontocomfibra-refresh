@@ -1,7 +1,7 @@
 export const WHATSAPP_NUMBER = "551151182800";
 export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-export const CENTRAL_ASSINANTE_URL = "https://ixc.pontocomfibra.com.br/central_solicitacao_498374";
+export const CENTRAL_ASSINANTE_URL = "https://api.wnfibra.hubsoft.com.br/central/servico";
 
 export type RegionGroup = "campinas" | "cotia";
 
