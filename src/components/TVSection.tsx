@@ -1,4 +1,4 @@
-import { Tv, Smartphone, Monitor, Tablet } from "lucide-react";
+import { Smartphone, Monitor, Tablet, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_BASE_URL, TV_CATEGORIES } from "@/data/siteData";
 
@@ -10,11 +10,10 @@ export function TVSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-sm tracking-widest uppercase text-primary mb-4">.COM TV</p>
+            <span className="text-sm font-bold text-primary uppercase tracking-wider">.COM TV</span>
 
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">
-              TV Online com{" "}
-              <span className="italic text-primary">+190 canais</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4 text-foreground">
+              TV Online com <span className="text-primary">+190 canais</span>
             </h2>
 
             <p className="text-muted-foreground text-lg mb-6 max-w-md">
@@ -23,7 +22,7 @@ export function TVSection() {
 
             <div className="flex items-baseline gap-1 mb-8">
               <span className="text-sm text-muted-foreground">A partir de</span>
-              <span className="text-3xl font-semibold">R$29,90</span>
+              <span className="text-4xl font-extrabold text-foreground">R$29,90</span>
               <span className="text-muted-foreground">/mês</span>
             </div>
 
@@ -31,7 +30,7 @@ export function TVSection() {
               {TV_CATEGORIES.map(cat => (
                 <span
                   key={cat}
-                  className="px-3 py-1.5 rounded-full text-xs border border-border text-muted-foreground"
+                  className="px-4 py-2 rounded-xl text-xs font-semibold bg-primary/10 text-primary"
                 >
                   {cat}
                 </span>
@@ -43,22 +42,25 @@ export function TVSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-bold shadow-lg shadow-primary/25">
+                <Play className="w-4 h-4 mr-2" />
                 Contratar TV Online
               </Button>
             </a>
           </div>
 
-          <div className="bg-card border border-border rounded-2xl p-8">
-            <div className="flex justify-center gap-10 mb-8">
+          <div className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg">
+            <div className="flex justify-center gap-12 mb-8">
               {[
                 { icon: Monitor, label: "Smart TV" },
                 { icon: Smartphone, label: "Celular" },
                 { icon: Tablet, label: "Tablet" },
               ].map(d => (
                 <div key={d.label} className="flex flex-col items-center gap-2">
-                  <d.icon className="w-8 h-8 text-primary" />
-                  <span className="text-xs text-muted-foreground">{d.label}</span>
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <d.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <span className="text-xs font-semibold text-muted-foreground">{d.label}</span>
                 </div>
               ))}
             </div>
@@ -67,7 +69,7 @@ export function TVSection() {
               {channels.map(ch => (
                 <div
                   key={ch}
-                  className="bg-secondary rounded-lg px-3 py-2.5 text-center text-sm font-medium text-foreground/80"
+                  className="bg-muted rounded-xl px-3 py-3 text-center text-sm font-bold text-foreground"
                 >
                   {ch}
                 </div>
