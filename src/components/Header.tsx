@@ -29,11 +29,8 @@ export function Header() {
 
       {/* Main nav */}
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary/20 glow-border flex items-center justify-center">
-            <span className="text-primary font-display font-bold text-lg">.C</span>
-          </div>
-          <span className="font-display font-bold text-xl text-foreground">.COM <span className="text-primary">Fibra</span></span>
+        <a href="#" className="flex items-center">
+          <img src="/logo.png" alt=".COM Fibra" className="h-10 w-auto" />
         </a>
 
         {/* Desktop nav */}
