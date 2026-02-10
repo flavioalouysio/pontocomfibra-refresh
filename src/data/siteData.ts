@@ -21,7 +21,7 @@ export const REGIONS: Record<RegionGroup, { label: string; cities: string[] }> =
   },
   cotia: {
     label: "Itapecerica e Região",
-    cities: ["Cotia", "Itapecerica da Serra", "Embu das Artes", "São Carlos"],
+    cities: ["Cotia", "Itapecerica da Serra", "Embu das Artes"],
   },
 };
 
