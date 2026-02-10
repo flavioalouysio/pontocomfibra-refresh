@@ -11,28 +11,27 @@ const differentials = [
 
 export function DifferentialsSection() {
   return (
-    <section id="diferenciais" className="py-24 bg-section-gradient">
+    <section id="diferenciais" className="py-24 bg-secondary/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Por que escolher a <span className="text-gradient">.COM Fibra</span>?
+        <div className="text-center mb-14">
+          <h2 className="font-serif text-4xl md:text-5xl mb-3">
+            Por que escolher a{" "}
+            <span className="italic text-primary">.COM Fibra</span>?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-md mx-auto">
             Muito mais do que internet. Uma experiência completa de conectividade.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {differentials.map((d, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          {differentials.map((d) => (
             <div
               key={d.title}
-              className="glass-card p-6 hover:glow-border transition-all duration-300 group"
+              className="bg-card border border-border rounded-xl p-6 hover:border-primary/40 transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <d.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-lg text-foreground mb-2">{d.title}</h3>
-              <p className="text-sm text-muted-foreground">{d.description}</p>
+              <d.icon className="w-5 h-5 text-primary mb-4" />
+              <h3 className="font-medium text-foreground mb-1.5">{d.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{d.description}</p>
             </div>
           ))}
         </div>
