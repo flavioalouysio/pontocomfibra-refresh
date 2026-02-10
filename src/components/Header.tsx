@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CONTACT, CENTRAL_ASSINANTE_URL } from "@/data/siteData";
@@ -16,10 +16,22 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+      {/* Top bar */}
+      <div className="bg-primary text-primary-foreground">
+        <div className="container mx-auto flex items-center justify-between px-4 h-9 text-xs">
+          <div className="flex items-center gap-2">
+            <Phone className="w-3 h-3" />
+            <span className="font-medium">{CONTACT.phone}</span>
+          </div>
+          <span className="hidden sm:inline">{CONTACT.email}</span>
+        </div>
+      </div>
+
+      {/* Main nav */}
       <div className="container mx-auto flex items-center justify-between px-4 h-16">
         <a href="#" className="flex items-center gap-2">
-          <img src="/logo.png" alt=".COM Fibra" className="h-8 w-auto" />
+          <img src="/logo.png" alt=".COM Fibra" className="h-9 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -27,7 +39,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {link.label}
             </a>
@@ -35,10 +47,9 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <span className="text-sm text-muted-foreground">{CONTACT.phone}</span>
           <ThemeToggle />
           <a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer">
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
               Central do Assinante
             </Button>
           </a>
@@ -59,13 +70,13 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-lg text-foreground hover:text-primary transition-colors"
+                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
                 ))}
                 <a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-primary text-primary-foreground">
+                  <Button className="w-full bg-primary text-primary-foreground font-semibold">
                     Central do Assinante
                   </Button>
                 </a>

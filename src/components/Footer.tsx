@@ -1,68 +1,56 @@
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
-import { CONTACT, REGIONS, CENTRAL_ASSINANTE_URL } from "@/data/siteData";
+import { CONTACT, CENTRAL_ASSINANTE_URL, REGIONS, RegionGroup } from "@/data/siteData";
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 
-const allCities = Object.values(REGIONS).flatMap(r => r.cities);
+const allCities = (Object.keys(REGIONS) as RegionGroup[]).flatMap(k => REGIONS[k].cities);
 
 export function Footer() {
   return (
-    <footer id="contato" className="py-16 border-t border-border">
+    <footer id="contato" className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <img src="/logo.png" alt=".COM Fibra" className="h-7 w-auto" />
-            </div>
+            <img src="/logo.png" alt=".COM Fibra" className="h-10 w-auto mb-4" />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Internet 100% Fibra Óptica com a melhor experiência de conexão.
+              Internet 100% fibra óptica com a qualidade e velocidade que você merece.
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-medium text-sm uppercase tracking-wider mb-4 text-foreground">Contato</h4>
-            <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary" /> {CONTACT.phone}
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-primary" /> {CONTACT.email}
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-medium text-sm uppercase tracking-wider mb-4 text-foreground">Cidades Atendidas</h4>
-            <ul className="space-y-1.5 text-sm text-muted-foreground">
-              {allCities.map(c => (
-                <li key={c} className="flex items-center gap-2">
-                  <MapPin className="w-3 h-3 text-primary" /> {c}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-medium text-sm uppercase tracking-wider mb-4 text-foreground">Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#planos" className="text-muted-foreground hover:text-foreground transition-colors">Planos</a></li>
-              <li><a href="#tv" className="text-muted-foreground hover:text-foreground transition-colors">TV Online</a></li>
-              <li>
-                <a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Central do Assinante
-                </a>
-              </li>
-            </ul>
-            <div className="flex gap-2 mt-4">
-              <a href={CONTACT.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:border-primary transition-colors">
-                <Facebook className="w-3.5 h-3.5 text-muted-foreground" />
+            <div className="flex gap-3 mt-4">
+              <a href={CONTACT.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                <Facebook className="w-4 h-4" />
               </a>
-              <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:border-primary transition-colors">
-                <Instagram className="w-3.5 h-3.5 text-muted-foreground" />
+              <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-foreground mb-4">Contato</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" />{CONTACT.phone}</li>
+              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" />{CONTACT.email}</li>
+              <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" />{CONTACT.address}</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-foreground mb-4">Cidades Atendidas</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {allCities.map(city => <li key={city}>{city}</li>)}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-foreground mb-4">Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#planos" className="text-muted-foreground hover:text-primary transition-colors">Planos</a></li>
+              <li><a href="#tv" className="text-muted-foreground hover:text-primary transition-colors">TV Online</a></li>
+              <li><a href="#diferenciais" className="text-muted-foreground hover:text-primary transition-colors">Diferenciais</a></li>
+              <li><a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Central do Assinante</a></li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 text-center text-xs text-muted-foreground">
+        <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} .COM Fibra. Todos os direitos reservados.
         </div>
       </div>
