@@ -30,13 +30,13 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
     {
       speed: "300 Mega",
       price: "99,90",
-      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Grátis", "Sem Franquia de Dados"],
+      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       tvChannels: "+190 canais",
     },
     {
       speed: "600 Mega",
       price: "119,90",
-      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Grátis", "Sem Franquia de Dados"],
+      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
       tvChannels: "+190 canais",
     },
@@ -45,13 +45,13 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
     {
       speed: "300 Mega",
       price: "109,90",
-      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Grátis", "Sem Franquia de Dados"],
+      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       tvChannels: "+190 canais",
     },
     {
       speed: "600 Mega",
       price: "129,90",
-      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Grátis", "Sem Franquia de Dados"],
+      features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
       tvChannels: "+190 canais",
     },

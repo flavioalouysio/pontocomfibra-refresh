@@ -6,7 +6,7 @@ const differentials = [
   { icon: Headphones, title: "Suporte Técnico", description: "Equipe especializada pronta para te ajudar." },
   { icon: Wifi, title: "Wi-Fi Grátis", description: "Roteador WiFi-TOP incluso em todos os planos." },
   { icon: Tv, title: "Super Grade de Canais", description: "+190 canais de TV Online com o melhor conteúdo." },
-  { icon: Clock, title: "Instalação Rápida", description: "Instalação gratuita e sem burocracia." },
+  { icon: Clock, title: "Instalação Facilitada", description: "Instalação facilitada e sem burocracia." },
 ];
 
 export function DifferentialsSection() {
