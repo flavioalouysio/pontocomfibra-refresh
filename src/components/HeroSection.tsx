@@ -36,7 +36,7 @@ export function HeroSection() {
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           Planos a partir de <span className="text-primary font-bold text-2xl">R$99,90</span>/mês.
-          Sem franquia de dados. Instalação grátis.
+          Sem franquia de dados. Instalação facilitada.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 animate-fade-up" style={{ animationDelay: "0.4s" }}>
