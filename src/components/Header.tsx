@@ -3,6 +3,7 @@ import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CONTACT, CENTRAL_ASSINANTE_URL } from "@/data/siteData";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Planos", href: "#planos" },
@@ -40,6 +41,7 @@ export function Header() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
           <a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm" className="glow-border text-primary border-primary/30 hover:bg-primary/10">
               Central do Assinante
@@ -61,6 +63,10 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">Tema:</span>
+                <ThemeToggle />
+              </div>
               <a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-primary text-primary-foreground">Central do Assinante</Button>
               </a>
