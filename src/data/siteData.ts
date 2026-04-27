@@ -28,12 +28,12 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
   campinas: [
     {
       speed: "300 Mega",
-      price: "99,90",
+      price: "81,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
     },
     {
       speed: "600 Mega",
-      price: "119,90",
+      price: "101,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
     },
@@ -41,12 +41,12 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
   cotia: [
     {
       speed: "300 Mega",
-      price: "109,90",
+      price: "101,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
     },
     {
       speed: "600 Mega",
-      price: "129,90",
+      price: "141,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
     },
