@@ -7,7 +7,6 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Planos", href: "#planos" },
-  { label: "TV Online", href: "#tv" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Contato", href: "#contato" },
 ];
