@@ -11,7 +11,6 @@ export interface Plan {
   priceNote?: string;
   features: string[];
   popular?: boolean;
-  tvChannels?: string;
 }
 
 export const REGIONS: Record<RegionGroup, { label: string; cities: string[] }> = {
@@ -31,14 +30,12 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
       speed: "300 Mega",
       price: "99,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
-      tvChannels: "+190 canais",
     },
     {
       speed: "600 Mega",
       price: "119,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
-      tvChannels: "+190 canais",
     },
   ],
   cotia: [
@@ -46,21 +43,15 @@ export const PLANS: Record<RegionGroup, Plan[]> = {
       speed: "300 Mega",
       price: "109,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
-      tvChannels: "+190 canais",
     },
     {
       speed: "600 Mega",
       price: "129,90",
       features: ["100% Fibra Óptica", "WiFi-TOP", "Instalação Facilitada", "Sem Franquia de Dados"],
       popular: true,
-      tvChannels: "+190 canais",
     },
   ],
 };
-
-export const TV_CATEGORIES = [
-  "Esporte", "Notícias", "Filmes", "Desenhos", "Séries", "Entretenimento"
-];
 
 export const CONTACT = {
   phone: "(11) 5118-2800",

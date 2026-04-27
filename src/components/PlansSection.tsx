@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Tv, Star, ArrowRight } from "lucide-react";
+import { Check, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { REGIONS, PLANS, RegionGroup, WHATSAPP_BASE_URL } from "@/data/siteData";
 
@@ -72,14 +72,6 @@ export function PlansSection() {
                     {f}
                   </li>
                 ))}
-                {plan.tvChannels && (
-                  <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Tv className="w-3 h-3 text-primary" />
-                    </div>
-                    TV Online {plan.tvChannels}
-                  </li>
-                )}
               </ul>
 
               <a

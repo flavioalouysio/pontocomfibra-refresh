@@ -24,7 +24,7 @@ export function HeroSection() {
               Internet de{" "}
               <span className="text-primary">ultra velocidade</span>
               <br />
-              + TV Online
+              100% fibra óptica
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-8">

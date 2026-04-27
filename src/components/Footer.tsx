@@ -43,7 +43,6 @@ export function Footer() {
             <h4 className="font-bold text-foreground mb-4">Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#planos" className="text-muted-foreground hover:text-primary transition-colors">Planos</a></li>
-              <li><a href="#tv" className="text-muted-foreground hover:text-primary transition-colors">TV Online</a></li>
               <li><a href="#diferenciais" className="text-muted-foreground hover:text-primary transition-colors">Diferenciais</a></li>
               <li><a href={CENTRAL_ASSINANTE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Central do Assinante</a></li>
             </ul>
