@@ -1,11 +1,11 @@
-import { Wifi, Zap, Headphones, Signal, Tv, Clock } from "lucide-react";
+import { Wifi, Zap, Headphones, Signal, ShieldCheck, Clock } from "lucide-react";
 
 const differentials = [
   { icon: Signal, title: "Sem Franquia de Dados", description: "Navegue o quanto quiser, sem limitações de consumo." },
   { icon: Zap, title: "Mais Velocidade", description: "Fibra óptica de ponta a ponta com velocidade real." },
   { icon: Headphones, title: "Suporte Técnico", description: "Equipe especializada pronta para te ajudar." },
   { icon: Wifi, title: "Wi-Fi Grátis", description: "Roteador WiFi-TOP incluso em todos os planos." },
-  { icon: Tv, title: "Super Grade de Canais", description: "+190 canais de TV Online com o melhor conteúdo." },
+  { icon: ShieldCheck, title: "Conexão Estável", description: "Rede preparada para entregar mais segurança e desempenho." },
   { icon: Clock, title: "Instalação Facilitada", description: "Instalação facilitada e sem burocracia." },
 ];
 
