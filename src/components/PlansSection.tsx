@@ -1,11 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { REGIONS, PLANS, RegionGroup, WHATSAPP_BASE_URL } from "@/data/siteData";
+import { supabase } from "@/integrations/supabase/client";
 
 export function PlansSection() {
   const [region, setRegion] = useState<RegionGroup>("campinas");
-  const plans = PLANS[region];
+  const [plansByRegion, setPlansByRegion] = useState(PLANS);
+  const plans = plansByRegion[region];
+
+  useEffect(() => {
+    const loadPlans = async () => {
+      const { data } = await supabase
+        .from("plan_prices")
+        .select("id, region_key, speed, price, features, popular, display_order")
+        .order("region_key", { ascending: true })
+        .order("display_order", { ascending: true });
+
+      if (!data?.length) return;
+
+      setPlansByRegion({
+        campinas: data
+          .filter((plan) => plan.region_key === "campinas")
+          .map((plan) => ({ id: plan.id, speed: plan.speed, price: plan.price, features: plan.features, popular: plan.popular, displayOrder: plan.display_order })),
+        cotia: data
+          .filter((plan) => plan.region_key === "cotia")
+          .map((plan) => ({ id: plan.id, speed: plan.speed, price: plan.price, features: plan.features, popular: plan.popular, displayOrder: plan.display_order })),
+      });
+    };
+
+    loadPlans();
+  }, []);
 
   return (
     <section id="planos" className="py-24 bg-muted/50">

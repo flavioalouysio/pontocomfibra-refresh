@@ -6,11 +6,13 @@ export const CENTRAL_ASSINANTE_URL = "https://api.wnfibra.hubsoft.com.br/central
 export type RegionGroup = "campinas" | "cotia";
 
 export interface Plan {
+  id?: string;
   speed: string;
   price: string;
   priceNote?: string;
   features: string[];
   popular?: boolean;
+  displayOrder?: number;
 }
 
 export const REGIONS: Record<RegionGroup, { label: string; cities: string[] }> = {
